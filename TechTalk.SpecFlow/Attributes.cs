@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using TechTalk.SpecFlow.Bindings;
 
 namespace TechTalk.SpecFlow
@@ -49,12 +50,12 @@ namespace TechTalk.SpecFlow
         }
 
 
-        public GivenAttribute(string regex)
+        public GivenAttribute([RegexPattern] string regex)
             : base(regex, StepDefinitionType.Given)
         {
         }
 
-        public GivenAttribute(string regex, string culture) 
+        public GivenAttribute([RegexPattern]string regex, string culture) 
             : this(regex)
         {
             Culture = culture;
@@ -70,12 +71,12 @@ namespace TechTalk.SpecFlow
         {
         }
 
-        public WhenAttribute(string regex)
+        public WhenAttribute([RegexPattern] string regex)
             : base(regex, StepDefinitionType.When)
         {
         }
 
-        public WhenAttribute(string regex, string culture) 
+        public WhenAttribute([RegexPattern] string regex, string culture) 
             : this(regex)
         {
             Culture = culture;
@@ -91,12 +92,12 @@ namespace TechTalk.SpecFlow
         {
         }
 
-        public ThenAttribute(string regex)
+        public ThenAttribute([RegexPattern]string regex)
             : base(regex, StepDefinitionType.Then)
         {
         }
 
-        public ThenAttribute(string regex, string culture) 
+        public ThenAttribute([RegexPattern]string regex, string culture) 
             : this(regex)
         {
             Culture = culture;
@@ -113,12 +114,12 @@ namespace TechTalk.SpecFlow
         {
         }
 
-        public StepDefinitionAttribute(string regex) 
+        public StepDefinitionAttribute([RegexPattern] string regex) 
             : base(regex, new[] { StepDefinitionType.Given, StepDefinitionType.When, StepDefinitionType.Then })
         {
         }
 
-        public StepDefinitionAttribute(string regex, string culture) 
+        public StepDefinitionAttribute([RegexPattern] string regex, string culture) 
             : this(regex)
         {
             Culture = culture;
