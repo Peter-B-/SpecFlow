@@ -222,6 +222,7 @@
     <Compile Include="Plugins\RuntimePluginLoader.cs" />
     <Compile Include="Plugins\RuntimePluginParameters.cs" />
     <Compile Include="ProgrammingLanguage.cs" />
+    <Compile Include="JetBrainsAnnotations\JetBrainsAnnotations.cs" />
     <Compile Include="ScenarioStepContext.cs" />
     <Compile Include="ScopeAttributes.cs" />
     <Compile Include="StepArgumentTransformationAttribute.cs" />
